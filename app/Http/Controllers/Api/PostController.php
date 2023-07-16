@@ -19,7 +19,7 @@ class PostController extends Controller
     {
         //get all posts
         $posts = Post::latest()->paginate(5);
-
+ 
         //return collection of posts as a resource
         return new PostResource(true, 'List Data Posts', $posts);
     }
